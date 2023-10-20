@@ -13,5 +13,5 @@ steps:
       script: |
         # Write your commands here
         echo 'Hello world'
-        docker ps
+        sudo docker ps
 
