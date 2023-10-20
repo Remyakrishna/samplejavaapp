@@ -12,6 +12,6 @@ steps:
       targetType: 'inline'
       script: |
         # Write your commands here
-        ls|echo
+        ls
         echo 'Hello world'
 
