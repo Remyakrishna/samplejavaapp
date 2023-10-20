@@ -13,5 +13,6 @@ steps:
       script: |
         # Write your commands here
         whoami
-        sudo docker ps
+        sudo docker build --file Dockerfile --tag sample:1
+        sudo docker images
 
