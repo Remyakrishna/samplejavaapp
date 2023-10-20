@@ -15,4 +15,12 @@ steps:
         whoami
         sudo docker build --file Dockerfile --tag sample:1 .
         sudo docker images
+  
 
+  - task: DockerCompose@0
+    inputs:
+      containerregistrytype: 'Azure Container Registry'
+      azureSubscription: 'Free Trial(fc11941c-8de6-445e-b2cc-3ac7ac3961e3)'
+      azureContainerRegistry: '{"loginServer":"devsample.azurecr.io", "id" : "/subscriptions/fc11941c-8de6-445e-b2cc-3ac7ac3961e3/resourceGroups/dev/providers/Microsoft.ContainerRegistry/registries/devsample"}'
+      dockerComposeFile: '**/docker-compose.yml'
+      action: 'Build services'
